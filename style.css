@@ -1,0 +1,72 @@
+/* *------------------ FONTS ------------------* */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    text-align: center;
+    height: 90vh;
+    position: relative;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.container {
+    margin: 24;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+}
+
+.btn {
+    margin: 24px;
+    height: 128px;
+    margin: 36px;
+    height: 144px;
+    border: solid 4px black;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgb(187, 191, 197);
+}
+
+.btn-container {
+    padding: 24px;
+}
+
+
+.result-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    justify-content: center;
+}
+
+.score p {
+    font-size: 8rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.score span {
+    font-size: 2rem;
+}
+
+.result {
+    font-size: 4rem;
+    font-weight: 700;
+    width: 36rem;
+    text-align: center;
+    margin: auto 0;
+}
