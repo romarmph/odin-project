@@ -1,22 +1,16 @@
-function Book(title, author, pages, isRead, thumbnail) {
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.isRead = isRead;
-	this.thumbnail = thumbnail;
+function Book(props) {
+	this.title = props.title;
+	this.author = props.author;
+	this.pages = props.pages;
+	this.isRead = props.isRead;
+	this.thumbnail = props.thumbnail;
 }
 
-function addBookToLibrary(book) {
-	books.push(book);
-}
-
-function loadAllBooks() {
-	const booksGrid = document.querySelector('#books_grid');
-
+function newCard(book, id) {
 	function getThumbnail(url) {
 		if (url) {
 			return `
-				<img src="https://thedailyaztec.com/wp-content/uploads/2021/04/image-900x900.jpeg" alt="" class="thumbnail">
+				<img src="${url}" alt="" class="thumbnail">
 			`
 		}
 
@@ -26,10 +20,8 @@ function loadAllBooks() {
 			</div>
 		`
 	}
-
-	books.forEach(book => {
-		const card = `
-				<div class="card">
+	return `
+				<div class="card" id="${id}">
 					${getThumbnail(book.thumbnail)}
 					<div class="title">
 						<p class="">${book.title}</p>
@@ -44,25 +36,43 @@ function loadAllBooks() {
 					</div>
 				</div>
 		`;
+}
+
+function addBookToLibrary(book, node) {
+	const booksGrid = document.querySelector('#books_grid');
+	booksGrid.innerHTML += node;
+	books.push(book);
+}
+
+
+function loadAllBooks() {
+	const booksGrid = document.querySelector('#books_grid');
+
+
+	books.forEach((book, index) => {
+		const card = newCard(book, book.title.toLowerCase().split(" ").join("-"));
 
 		booksGrid.innerHTML += card;
 	})
-
-	console.log(booksGrid);
 }
 
-function handleClick(event) {
-	event.preventDefault();
-
-	console.log(event);
-}
 
 const books = [
-	new Book('Book 1', 'Author 1', 50, false),
-	new Book('Book 2', 'Author 2', 100, true),
+	new Book({ title: 'Book 1', author: 'Author 1', pages: 50, isRead: false, thumbnail: "" }),
+	new Book({ title: 'Book 2', author: 'Author 2', pages: 100, isRead: true, thumbnail: "" }),
 ];
 
+const form = document.getElementById('form');
 
-const button = document.getElementById("add_button");
+function handleSubmit(event) {
+	event.preventDefault();
 
-button.addEventListener('click', handleClick);
+	let formData = new FormData(event.target);
+	const formProps = Object.fromEntries(formData);
+
+	const book = new Book(formProps);
+	const card = newCard(book, book.title.toLowerCase().split(" ").join("-"));
+
+	addBookToLibrary(book, card);
+}
+form.addEventListener('submit', handleSubmit);

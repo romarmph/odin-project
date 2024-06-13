@@ -14,26 +14,35 @@
 <body onload="loadAllBooks()">
 	<div class="sidebar">
 		<h2>Add New Book</h2>
-		<form class="form">
+		<form class="form" id="form">
 			<div class="input__group">
 				<label for="title">Title</label>
-				<input type="text" class="input__group__input" id="title">
+				<input type="text" class="input__group__input" id="title" name="title">
 			</div>
 			<div class="input__group">
 				<label for="author">Author</label>
-				<input type="text" class="input__group__input" id="author">
+				<input type="text" class="input__group__input" id="author" name="author">
 			</div>
 			<div class="input__group">
 				<label for="pages">No. of Pages</label>
-				<input type="text" class="input__group__input" id="pages">
+				<input type="text" class="input__group__input" id="pages" name="pages">
 			</div>
 			<div class="input__group">
 				<label for="isRead">Have you read this book already?</label>
-				<input type="text" class="input__group__input" id="isRead">
+				<div class="choice">
+					<label for="" class="checkbox__group">
+						<input type="radio" name="isRead" value="true">
+						Yes
+					</label>
+					<label for="" class="checkbox__group">
+						<input type="radio" name="isRead" value="">
+						No
+					</label>
+				</div>
 			</div>
 			<div class="input__group">
 				<label for="thumbnail">Thumbnail URL</label>
-				<input type="text" class="input__group__input" id="thumbnail">
+				<input type="text" class="input__group__input" id="thumbnail" name="thumbnail">
 			</div>
 			<button id="add_button">Add Book</button>
 		</form>
