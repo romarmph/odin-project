@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Etch-A-Sketch</h1>
+        <div class="settings">
+            <h2>Settings</h2>
+            <input type="color" class="colorPicker btn" value="#000">
+            <input type="submit" class="btn" value="Pixel" id="pixel">
+            <input type="submit" class="btn" value="Clear" id="clear">
+            <ul class="toggle" name="toggle">
+                <li>
+                    <input type="radio" class="color-mode" id="color" name="toggle" checked="checked" autocomplete="off"/>
+                    <label for="color">Color</label>
+                </li>
+                <li>
+                    <input type="radio" class="color-mode" id="rainbow" name="toggle" autocomplete="off"/>
+                    <label for="rainbow">Rainbow</label>
+                </li>
+                <li>
+                    <input type="radio" class="color-mode" id="gray" name="toggle" autocomplete="off"/>
+                    <label for="gray">Gray</label>
+                </li>
+            </ul>
+        </div>
+        <div class="canvas-container">
+            <h2>Canvas</h2>
+            <div class="canvas"></div>
+        </div>
+        <div class="footer"><a href="https://github.com/romarmph/odin-etch-a-sketch" target=”_blank”>Created by: Romar Macaraeg</a></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
