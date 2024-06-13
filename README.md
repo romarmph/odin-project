@@ -1,7 +1,9 @@
-# The Odin Project Coursework
+# project-landing-page
+
+## The Odin Project Coursework
 
 This repository contains all my projects that I've completed.
 
-## Structure
+### Structure
 
 Each project or exercise is stored in its own branch.

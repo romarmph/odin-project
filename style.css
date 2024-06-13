@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Colors */
+    --dark-bg-color: #1F2937;
+    --hero-main-text-color: #F9FaF8;
+    --hero-secondary-text-color: #e5e7eb;
+    --header-logo-color: invert(97%) sepia(100%) saturate(10%) hue-rotate(28deg) brightness(100%) contrast(97%);
+    --button-color: #3882f6;
+    --information-header-text-color: #1f2936;
+    --quote-section-bg-color: #e5e7eb;
+    --quote-text-color: #1f2937;
+
+    /* Font size */
+    --hero-main-text-size: 48px;
+    --hero-secondary-text-size: 18px;
+    --information-header-text: 36px;
+    --contact-title-size: 24px;
+    --contact-text-size: 12px;
+    --quote-text-size: 36px;
+
+    /* Font Weight */
+    --hero-main-text-weight: 900; 
+    --information-header-text-weight: 900; 
+    --quote-text-weight: 300;   
+
+    
+}
+
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ------------------ Header ------------------ */
+.header {
+    padding: 24px 300px;
+    background-color: var(--dark-bg-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 24px;
+    filter: var(--header-logo-color);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 48px;
+}
+
+.nav-links {
+    font-size: var(--hero-secondary-text-size);
+    text-decoration: none;
+    color: var(--hero-secondary-text-color);
+    font-size: 18px;
+}
+
+/* ------------------ Hero ------------------ */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 300px;
+    background-color: var(--dark-bg-color);
+}
+
+.hero-main-text {
+    font-size: var(--hero-main-text-size);
+    font-weight: var(--hero-main-text-weight);
+    color: var(--hero-main-text-color);
+    margin-bottom: 16px;
+}
+
+.hero-text {
+    font-size: var(--hero-secondary-text-size);
+    color: var(--hero-secondary-text-color);
+    margin-bottom: 24px;
+}
+
+.hero-image {
+    width: 400px;
+    border-radius: 50%;
+    margin-left: 48px;
+}
+
+.contact-me-btn {
+    padding: 8px 16px;
+    background-color: var(--button-color);
+    color: var(--hero-secondary-text-color);
+    border-radius: 6px;
+    font-size: var(--hero-secondary-text-size);
+    border: 0;
+}
+
+/* ------------------ Contact Me ------------------ */
+.contact-me-header {
+    font-size: var(--information-header-text);
+    color: var(--information-header-text-color);
+    text-align: center;
+    margin: 48px;
+}
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 128px;
+    margin-bottom: 48px;
+}
+
+.contact-images {
+    max-width: 94px;
+    margin: 24px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-title {
+    font-size: var(--contact-title-size);
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--information-header-text-color);
+}
+
+
+/* ------------------ About Me ------------------ */
+.quote-section {
+    background-color: var(--quote-section-bg-color);
+    padding: 96px 500px;
+}
+
+.author {
+    text-align: end;
+    font-weight: 500;
+    font-size: 28px;
+    margin-right: 48px;
+}
+
+.quote {
+    font-size: var(--quote-text-size);
+    font-weight: var(--quote-text-weight);
+    font-style: italic;
+}
+
+/* ------------------ Email Me ------------------ */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 96px;
+}
+
+.email-me {
+    display: flex;
+    gap: 256px;
+    background-color: var(--button-color);
+    border-radius: 10px;
+    padding: 64px;
+}
+
+.email-me-header {
+    color: var(--hero-secondary-text-color);
+    font-size: var(--quote-text-size);
+}
+
+.email-me-text {
+    font-size: var(--hero-secondary-text-color);
+    color: var(--hero-secondary-text-color);
+}
+
+.email-me-btn {
+    padding: 8px 16px;
+    background-color: var(--button-color);
+    color: var(--hero-secondary-text-color);
+    border-radius: 10px;
+    font-size: var(--hero-secondary-text-size);
+    border: 2px solid white;
+}
+
+.footer {
+    background-color: var(--dark-bg-color);
+    color: var(--hero-main-text-color);
+    text-align: center;
+    padding: 48px;
+}
