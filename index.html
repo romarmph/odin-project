@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="container">
+    <div class="brand-container">
+      <img src="https://cdn-icons-png.flaticon.com/512/4570/4570039.png" alt="origami-logo" class="brand_logo">
+      <h1 class="brand_name">Origami</h1>
+      <a class="attribution" target="_blank" href="https://www.flaticon.com/free-icons/origami" title="origami icons">Origami icons created by Freepik - Flaticon</a>
+    </div>
+    <div class="form-container">
+      <p>Do you really think we are not real? What is supposed to be real and what is supposed to be not? Are you sure? You don't want to sign up? Really?</p>
+      <p>You <i>know</i> you want to.</p>
+      <form novalidate>
+        <div class="row">
+          <div class="input-group">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Please enter your first name" pattern="^[A-Za-z]+$">
+          </div>
+          <div class="input-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Please enter your last name" pattern="^[A-Za-z]+$">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" placeholder="Please enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          </div>
+          <div class="input-group">
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" name="phone_number" id="phone_number" placeholder="Please enter your phone number">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Please enter your desired password" pattern=".{8,}">
+          </div>
+          <div class="input-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Please confirm your password" pattern=".{8,}">
+          </div>
+        </div>
+        <button type="submit">Create Account</button>
+        <p class="account-exist">Already have an acocunt? <span>Log in</span></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

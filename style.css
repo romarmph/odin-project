@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --color-primary: #6e61b6;
+  --color-secondary: #b8daff;
+  --color-primary-light: #f7f6fa;
+  --color-light: #fff;
+  --color-dark: #191d23;
+  --color-error: #ff4d66;
+  --color-success: #4ee5a7;
+  --font-family: 'Rubik', sans-serif;
+
+  --brand-min-width: 512px;
+
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-width: var(--brand-min-width);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brand-container {
+  background-color: var(--color-secondary);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237172c6' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: var(--brand-min-width);
+  gap: 48px;
+  position: relative;
+}
+
+.brand_logo {
+  width: 100px;
+  height: 100px;
+}
+
+.brand_name {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--color-light);
+  padding: 1rem;
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-dark);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.4rem;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.form-container {
+  background: var(--color-light);
+  min-width: var(--brand-min-width);
+  flex: 2;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.form-container > p:nth-child(1) {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.form-container > p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 1rem 0;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 0.4rem 0;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  outline: transparent;
+  border: none;
+  background: var(--color-primary-light);
+}
+
+input:enabled {
+  outline: none;
+  border: 2px solid var(--color-primary-light);
+}
+
+input:active {
+  box-sizing: border-box;
+}
+
+input:hover {
+  box-sizing: border-box;
+  border: 2px solid var(--color-primary);
+}
+
+input:focus {
+  box-sizing: border-box;
+  border: 2px solid var(--color-primary);
+}
+
+input:focus:valid {
+  box-sizing: border-box;
+  border: 2px solid var(--color-success);
+}
+
+input:invalid {
+  box-sizing: border-box;
+  border: 2px solid var(--color-error);
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.account-exist {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-dark);
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.account-exist > span {
+  color: var(--color-primary)
+}
+
