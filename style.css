@@ -263,3 +263,25 @@ body {
 	}
 
 }
+
+#toggle__button {
+	background: none;
+	border: none;
+	border-radius: 8px;
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	i {
+		font-size: 16px;
+	}
+}
+
+#toggle__button:hover {
+	background: var(--gray-100);
+}
+
+#toggle__button:active {
+	background: var(--gray-200);
+}
