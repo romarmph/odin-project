@@ -2,6 +2,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
 * {
@@ -46,22 +47,109 @@ h6 {
 
 body {
 	height: 100dvh;
+	background: #14161a;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	gap: 32px;
-}
-
-#odin__brand {
-	img {
-		height: 180px;
-	}
+	flex-direction: column;
+	gap: 4rem;
 }
 
 h1 {
-	font-size: 4rem;
-	font-family: sans-serif;
-	font-weight: 200;
-	color: #151311;
+	color: #adb7c9;
+	font-size: 2rem;
+	font-weight: 100;
+	padding: 32px;
+}
+
+.container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 48px;
+}
+
+.board__container {
+	width: 298px;
+	height: 298px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#board {
+	display: grid;
+	grid-template-rows: repeat(3, 100px);
+	grid-template-columns: repeat(3, 100px);
+
+	.cell {
+		border: 1px solid #222730;
+		cursor: pointer;
+	}
+}
+
+.x {
+	background: url("assets/X.png");
+	background-size: 48px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.o {
+	background: url("assets/o.png");
+	background-size: 48px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+p {
+	font-size: 24px;
+	font-weight: 100;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		display: inline;
+		height: 32px;
+		margin-inline: 16px;
+	}
+}
+
+button {
+	background: none;
+	border: none;
+	border-bottom: 1px solid #222730;
+	color: #fff;
+	padding: 12px;
+	width: 50%;
+}
+
+button:hover {
+	background: #1b1e24;
+}
+
+button:active {
+	background: #1b2029;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	color: #fff;
+	font-size: 24px;
+
+	h2 {
+		font-size: 20px;
+		font-weight: 100;
+		color: #5d6778;
+	}
+
+	img {
+		height: 32px;
+	}
 }
