@@ -38,33 +38,30 @@ const game = function() {
 		return currentPlayer;
 	}
 
+	function resetGame() {
+		board = [...Array(9)];
+		currentPlayer = 'x';
+	}
+
 	return {
 		setBoard,
 		getBoard,
 		setCurrentPlayer,
 		getCurrentPlayer,
+		resetGame,
 	}
 }()
 
 
 const displayController = function() {
+	const cells = game.getBoard().map(() => {
+		const div = document.createElement('div');
+		div.classList.add('cell');
+		document.querySelector('#board').append(div)
+		return div;
+	})
 
-	/**
-		* @param {object} game The game object
-		* @returns {array} cells An array of cell nodes for the game board
-	 */
-	function createBoardCells(game) {
-		if (!game) {
-			throw new Error('Game is undefined');
-		}
-		const board = game.getBoard();
-		const cells = board.map(() => {
-			const div = document.createElement('div');
-			div.classList.add('cell');
-			document.querySelector('#board').append(div)
-			return div;
-		})
-
+	function getBoardCells() {
 		return cells;
 	}
 
@@ -73,59 +70,71 @@ const displayController = function() {
 			throw new Error('Game is undefined');
 		}
 
-		let cells;
-		if (!cells) {
-			cells = createBoardCells(game);
-		}
+		const cells = getBoardCells();
 
 		cells.forEach((cell, index) => {
 			const gameBoard = game.getBoard();
-			cell.classList.add(gameBoard[index] ?? 'empty');
+			if (gameBoard[index]) {
+				cell.classList.add(gameBoard[index]);
+			} else {
+				cell.classList.remove('x');
+				cell.classList.remove('o');
+			}
 		})
 	}
 
-	function renderResult(result) {
-		const resultContainer = document.createElement('div');
-		resultContainer.classList.add('result');
-		resultContainer.innerHTML = '<h2>Game Over</h2>';
+	function renderCurrentTurn(game) {
+		const newTurn = `<p>It's <img src="assets/${game.getCurrentPlayer()}.png" alt=""> turn!</p>`;
 
-		if (result === 'draw') {
-			resultContainer.innerHTML = `
-		<h2>Game Over</h2>
-		<p>Draw!</p>
-			`;
-		} else if (result === 'x') {
-			resultContainer.innerHTML = `
-		<p>Winner!</p>
-		<img src="assets/x.png" alt="x-player-icon">
-			`
-		} else if (result === 'o') {
-			resultContainer.innerHTML = `
-		<p>Winner!</p>
-		<img src="assets/o.png" alt="o-player-icon">
-			`
-		} else {
-			throw new Error(`Invalud result '${result}'`);
-		}
-
-		const board = document.querySelector('.board__container');
-		document.querySelector('.container').insertBefore(resultContainer, board)
+		let container = document.querySelector('.result');
+		container.innerHTML = newTurn;
 	}
-
 	return {
+		getBoardCells,
 		renderBoard,
-		renderResult,
-		createBoardCells,
+		renderCurrentTurn,
 	}
 }()
 
 const gameController = function() {
+	function handleClick(player, index, game, displayController) {
+		if (!player || !['x', 'o'].includes(player)) {
+			throw new Error('Invalid player');
+		}
+
+		if (!index === undefined || (index < 0 || index > 8)) {
+			throw new Error(`Invalid board index ${index}`);
+		}
+
+		if (!game) {
+			throw new Error('Game is undefined');
+		}
+
+		let board = game.getBoard();
+
+		if (board[index]) {
+			return;
+		}
+		board.splice(index, 1, player);
+		game.setBoard(board);
+		game.setCurrentPlayer(function() {
+			if (player === 'x') {
+				return 'o';
+			}
+			return 'x'
+		}());
+
+		displayController.renderBoard(game);
+		displayController.renderCurrentTurn(game);
+	}
+
 	function startGame(game, displayController) {
-		const cells = displayController.createBoardCells(game);
+		const cells = displayController.getBoardCells();
+		displayController.renderCurrentTurn(game);
 
 		cells.forEach((cell, index) => {
 			cell.addEventListener('click', () => {
-				console.log(game.getCurrentPlayer(), index);
+				handleClick(game.getCurrentPlayer(), index, game, displayController);
 			})
 		})
 	}
@@ -137,4 +146,13 @@ const gameController = function() {
 
 window.addEventListener('load', () => {
 	gameController.startGame(game, displayController);
+
+
+})
+
+const button = document.getElementById('new_game_btn');
+button.addEventListener('click', () => {
+	game.resetGame();
+	displayController.renderBoard(game);
+	displayController.renderCurrentTurn(game);
 })
