@@ -1,6 +1,7 @@
 const game = function() {
 	let board = [...Array(9)]
 	let currentPlayer = 'x';
+	let gameOver = false;
 
 	function setBoard(newBoardState) {
 		if (!Array.isArray(newBoardState)) {
@@ -38,9 +39,18 @@ const game = function() {
 		return currentPlayer;
 	}
 
+	function setGameOver(value) {
+		gameOver = value;
+	}
+
+	function getGameOver() {
+		return gameOver;
+	}
+
 	function resetGame() {
 		board = [...Array(9)];
 		currentPlayer = 'x';
+		gameOver = false;
 	}
 
 	return {
@@ -48,6 +58,8 @@ const game = function() {
 		getBoard,
 		setCurrentPlayer,
 		getCurrentPlayer,
+		setGameOver,
+		getGameOver,
 		resetGame,
 	}
 }()
@@ -63,6 +75,37 @@ const displayController = function() {
 
 	function getBoardCells() {
 		return cells;
+	}
+
+
+	function renderCurrentTurn(game) {
+		const newTurn = `<p>It's <img src="assets/${game.getCurrentPlayer()}.png" alt=""> turn!</p>`;
+
+		let container = document.querySelector('.result');
+		container.innerHTML = newTurn;
+	}
+
+	function renderResult(result) {
+		const resultContainer = document.querySelector('.result');
+		resultContainer.innerHTML = '<h2>Game Over</h2>';
+
+		if (result === 'draw') {
+			resultContainer.innerHTML += `
+		<p>Draw!</p>
+			`;
+		} else if (result === 'x') {
+			resultContainer.innerHTML += `
+		<p>Winner!</p>
+		<img src="assets/x.png" alt="x-player-icon">
+			`
+		} else if (result === 'o') {
+			resultContainer.innerHTML += `
+		<p>Winner!</p>
+		<img src="assets/o.png" alt="o-player-icon">
+			`
+		} else {
+			throw new Error(`Invalud result '${result}'`);
+		}
 	}
 
 	function renderBoard(game) {
@@ -82,21 +125,55 @@ const displayController = function() {
 			}
 		})
 	}
-
-	function renderCurrentTurn(game) {
-		const newTurn = `<p>It's <img src="assets/${game.getCurrentPlayer()}.png" alt=""> turn!</p>`;
-
-		let container = document.querySelector('.result');
-		container.innerHTML = newTurn;
-	}
 	return {
 		getBoardCells,
 		renderBoard,
 		renderCurrentTurn,
+		renderResult,
 	}
 }()
 
 const gameController = function() {
+	function checkGameWinner(game) {
+		const board = game.getBoard();
+
+		if (board.filter(v => v !== undefined).length < 5) {
+			console.log('Skipping game winner check')
+			return;
+		}
+
+		const winningPatterns = [
+			// Rows
+			[0, 1, 2],
+			[3, 4, 5],
+			[6, 7, 8],
+			// Columns
+			[0, 3, 6],
+			[1, 4, 7],
+			[2, 5, 8],
+			// Diagonals
+			[0, 4, 8],
+			[2, 4, 6]
+		];
+
+		let winner;
+		winningPatterns.forEach(pattern => {
+			if (pattern.every(index => board[index] === game.getCurrentPlayer())) {
+				winner = game.getCurrentPlayer();
+			}
+		});
+
+		if (winner) {
+			return winner;
+		}
+
+		if (board.every(cell => cell !== undefined)) {
+			return 'draw';
+		}
+
+		return undefined;
+	}
+
 	function handleClick(player, index, game, displayController) {
 		if (!player || !['x', 'o'].includes(player)) {
 			throw new Error('Invalid player');
@@ -115,8 +192,19 @@ const gameController = function() {
 		if (board[index]) {
 			return;
 		}
+
 		board.splice(index, 1, player);
 		game.setBoard(board);
+		let result = checkGameWinner(game);
+		if (result) {
+			if (game.getGameOver()) {
+				return;
+			}
+			displayController.renderBoard(game);
+			displayController.renderResult(result);
+			game.setGameOver(true);
+			return;
+		}
 		game.setCurrentPlayer(function() {
 			if (player === 'x') {
 				return 'o';
@@ -146,8 +234,6 @@ const gameController = function() {
 
 window.addEventListener('load', () => {
 	gameController.startGame(game, displayController);
-
-
 })
 
 const button = document.getElementById('new_game_btn');
