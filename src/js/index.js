@@ -26,7 +26,6 @@ function App({
 	}
 }
 
-
 App({
 	attributes: {},
 	children: [

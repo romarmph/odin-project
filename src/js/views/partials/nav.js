@@ -1,6 +1,7 @@
-import { Header, Nav } from "../../components/layout";
+import { Header, Nav, Div } from "../../components/layout";
 import { Button } from "../../components/interactives";
 import { currentViewIndex } from "../../viewState";
+import { Img } from "../../components/content";
 
 const buttons = [
 	"Home",
@@ -10,20 +11,38 @@ const buttons = [
 ];
 
 const nav = Header({
-	child: Nav({
+	attributes: {
+		class: 'header',
+	},
+	child: Div({
 		attributes: {
-			class: "nav",
+			class: 'nav__container',
 		},
-		children: buttons.map((child, index) => {
-			const button = Button({
+		children: [
+			Div({
 				attributes: {
-					class: "nav__button",
+					class: 'brand',
 				},
-				child: child,
-			});
-			button.addEventListener("click", () => currentViewIndex.update(() => index));
-			return button;
-		})
+				child: Img({
+					src: '#',
+				})
+			}),
+			Nav({
+				attributes: {
+					class: "nav",
+				},
+				children: buttons.map((child, index) => {
+					const button = Button({
+						attributes: {
+							class: "nav__button",
+						},
+						child: child,
+					});
+					button.addEventListener("click", () => currentViewIndex.update(() => index));
+					return button;
+				})
+			})
+		],
 	}),
 });
 
