@@ -44,6 +44,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-family: "Anek Devanagari";
 }
 
 * {
@@ -195,7 +196,6 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	margin-block: 32px;
 
 	hr {
 		border-color: var(--dark-800);
@@ -345,6 +345,37 @@ footer {
 			button.active {
 				border: none;
 			}
+		}
+	}
+}
+
+.menu__title {
+	font-family: "Playfair Display";
+	font-size: clamp(2rem, 10dvw, 8rem);
+	text-align: center;
+	padding-top: 100px;
+}
+
+.menu {
+	margin-top: 64px;
+
+	.menu__sub__title {
+		text-align: center;
+		font-size: 1.25rem;
+		font-weight: 400;
+		font-kerning: normal;
+		color: var(--yellow-100)
+	}
+
+	.menu__list {
+		padding: min(32px, 4dvw);
+
+		.menu__list__item {
+			display: flex;
+			justify-content: space-between;
+			font-size: 1.25rem;
+			font-weight: 200;
+			margin-bottom: 16px;
 		}
 	}
 }
