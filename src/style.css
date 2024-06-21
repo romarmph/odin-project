@@ -110,37 +110,36 @@ body {
 				box-sizing: content-box;
 			}
 		}
-
-		.nav {
-			.nav__button {
-				padding: 8px 2px;
-				margin-left: 24px;
-				border-radius: 0;
-				border: none;
-				background: none;
-				color: var(--primary-50);
-				box-sizing: border-box;
-			}
-
-			.nav__button:hover {
-				border-bottom: 2px solid var(--dark-900);
-			}
-
-			.nav__button:active {
-				border-bottom: 2px solid var(--dark-800);
-			}
-
-			.active {
-				border-bottom: 2px solid var(--dark-50);
-			}
-
-			.active:hover,
-			.active:active {
-				border-color: var(--dark-50);
-			}
-		}
 	}
 }
+
+.nav__button {
+	padding: 8px 2px;
+	margin-left: 24px;
+	border-radius: 0;
+	border: none;
+	background: none;
+	color: var(--primary-50);
+	box-sizing: border-box;
+}
+
+.nav__button:hover {
+	border-bottom: 2px solid var(--dark-900);
+}
+
+.nav__button:active {
+	border-bottom: 2px solid var(--dark-800);
+}
+
+.active {
+	border-bottom: 2px solid var(--dark-50);
+}
+
+.active:hover,
+.active:active {
+	border-color: var(--dark-50);
+}
+
 
 .container {
 	margin-inline: auto;
@@ -315,5 +314,37 @@ body {
 
 	div:nth-child(2) {
 		left: 60%;
+	}
+}
+
+footer {
+	background: var(--dark-900);
+	margin-top: 128px;
+
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+		padding: 16px;
+
+		.brand {
+			width: 128px;
+		}
+
+		nav {
+			display: flex;
+			gap: max(32px, 10dvw);
+			align-items: center;
+			justify-items: center;
+
+			button {
+				border: none;
+			}
+
+			button.active {
+				border: none;
+			}
+		}
 	}
 }

@@ -5,6 +5,7 @@ import about from "./views/about";
 import contact from "./views/contact";
 import home from "./views/home";
 import menu from "./views/menu";
+import footer from "./views/partials/footer";
 import nav from "./views/partials/nav";
 import { TabViews } from "./views/views";
 
@@ -43,6 +44,7 @@ App({
 				},
 			}),
 			observable: currentViewIndex,
-		})
+		}),
+		footer
 	]
 });
