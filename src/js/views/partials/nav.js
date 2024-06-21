@@ -24,7 +24,7 @@ const nav = Header({
 					class: 'brand',
 				},
 				child: Img({
-					src: '#',
+					src: '../../../../assets/star-platinum.svg',
 				})
 			}),
 			Nav({
@@ -39,6 +39,16 @@ const nav = Header({
 						child: child,
 					});
 					button.addEventListener("click", () => currentViewIndex.update(() => index));
+					if (index === 0) {
+						button.classList.add('active');
+					}
+					currentViewIndex.subscribe((current) => {
+						if (index === current) {
+							button.classList.add('active');
+						} else {
+							button.classList.remove('active');
+						}
+					})
 					return button;
 				})
 			})

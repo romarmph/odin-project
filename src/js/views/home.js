@@ -1,23 +1,11 @@
-import { H } from "../components/content";
-import { Div } from "../components/layout";
+import hero from "./home/hero";
+import highlights from "./home/highlights";
+import content1 from "./home/content_1";
 
 const home = [
-	Div({
-		attributes: {
-			class: "hero",
-		},
-		children: [
-			Div({
-				attributes: {},
-				children: [
-					H({
-						level: 1,
-						child: "Home",
-					})
-				],
-			})
-		]
-	}),
+	hero,
+	highlights,
+	content1,
 ];
 
 export default home;
