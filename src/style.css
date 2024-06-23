@@ -349,11 +349,24 @@ footer {
 	}
 }
 
-.menu__title {
+.page__title {
 	font-family: "Playfair Display";
 	font-size: clamp(2rem, 10dvw, 8rem);
 	text-align: center;
 	padding-top: 100px;
+}
+
+.page__sub__title {
+	text-align: center;
+	font-size: clamp(1.5rem, 5dvw, 4rem);
+	font-family: "Playfair Display";
+	margin-top: 32px;
+}
+
+.about__content {
+	width: max(400px, 70%);
+	text-align: justify;
+	margin-top: 24px;
 }
 
 .menu {
