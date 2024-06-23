@@ -4,8 +4,8 @@ export function Div({ child, children, attributes = {} }) {
 	return createPairedElement({ element: 'div', child, children, attributes });
 }
 
-export function Main({ child, children, attributes = {} }) {
-	return createPairedElement({ element: 'main', child, children, attributes });
+export function Form({ child, children, attributes = {} }) {
+	return createPairedElement({ element: 'form', child, children, attributes });
 }
 
 export function Header({ child, children, attributes = {} }) {

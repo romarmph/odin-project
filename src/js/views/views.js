@@ -31,7 +31,7 @@ export function TabViews({ parent, views, observable }) {
 		refreshContent(views[value], parent);
 	});
 
-	refreshContent(views[2], parent);
+	refreshContent(views[0], parent);
 
 	return parent;
 }
