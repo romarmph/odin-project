@@ -2,6 +2,7 @@ import { createPairedElement } from "../../components/factory";
 import { Div, Nav } from "../../components/layout";
 import { P, Img } from "../../components/content";
 import { createNavButtons } from "../../components/createNavButtons";
+import starPlatinumLogo from "../../../../assets/star-platinum.svg"
 
 const footer = createPairedElement({
 	element: 'footer',
@@ -15,7 +16,7 @@ const footer = createPairedElement({
 					class: "brand",
 				},
 				child: Img({
-					src: '../../../../assets/star-platinum.svg',
+					src: starPlatinumLogo,
 				}),
 			}),
 			Nav({

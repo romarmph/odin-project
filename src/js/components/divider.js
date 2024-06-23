@@ -1,6 +1,7 @@
 import { createUnpairedElement } from "./factory";
 import { Img } from "../components/content";
 import { Div } from "../components/layout"
+import starDark from "../../../assets/star-dark.svg"
 
 export function Divider(attributes = {}) {
 	const hr = createUnpairedElement({ element: 'hr' });
@@ -15,11 +16,11 @@ export function Divider(attributes = {}) {
 		attributes,
 		children: [
 			Img({
-				src: '../../../assets/star-dark.svg',
+				src: starDark,
 			}),
 			hr,
 			Img({
-				src: '../../../assets/star-dark.svg',
+				src: starDark,
 			})
 		]
 	})

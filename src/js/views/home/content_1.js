@@ -1,5 +1,6 @@
 import { Div } from "../../components/layout"
 import { Img, P, H, Span } from "../../components/content"
+import img1 from "../../../../assets/image.jpg";
 
 const content1 = Div({
 	attributes: {
@@ -8,7 +9,7 @@ const content1 = Div({
 	children: [
 		Div({
 			child: Img({
-				src: "../../../assets/image-1.webp",
+				src: img1,
 			}),
 		}),
 		Div({

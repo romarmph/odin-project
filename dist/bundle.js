@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Divider: () => (/* binding */ Divider)\n/* harmony export */ });\n/* harmony import */ var _factory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./factory */ \"./src/js/components/factory.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ \"./src/js/components/layout.js\");\n\n\n\n\nfunction Divider(attributes = {}) {\n\tconst hr = (0,_factory__WEBPACK_IMPORTED_MODULE_0__.createUnpairedElement)({ element: 'hr' });\n\n\tif (attributes.hasOwnProperty('class')) {\n\t\tattributes.class = 'divider ' + attributes.class;\n\t} else {\n\t\tattributes.class = 'divider';\n\t}\n\n\treturn (0,_components_layout__WEBPACK_IMPORTED_MODULE_2__.Div)({\n\t\tattributes,\n\t\tchildren: [\n\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Img)({\n\t\t\t\tsrc: '../../../assets/star-dark.svg',\n\t\t\t}),\n\t\t\thr,\n\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Img)({\n\t\t\t\tsrc: '../../../assets/star-dark.svg',\n\t\t\t})\n\t\t]\n\t})\n}\n\n\n//# sourceURL=webpack://odin-project/./src/js/components/divider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Divider: () => (/* binding */ Divider)\n/* harmony export */ });\n/* harmony import */ var _factory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./factory */ \"./src/js/components/factory.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _assets_star_dark_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/star-dark.svg */ \"./assets/star-dark.svg\");\n\n\n\n\n\nfunction Divider(attributes = {}) {\n\tconst hr = (0,_factory__WEBPACK_IMPORTED_MODULE_0__.createUnpairedElement)({ element: 'hr' });\n\n\tif (attributes.hasOwnProperty('class')) {\n\t\tattributes.class = 'divider ' + attributes.class;\n\t} else {\n\t\tattributes.class = 'divider';\n\t}\n\n\treturn (0,_components_layout__WEBPACK_IMPORTED_MODULE_2__.Div)({\n\t\tattributes,\n\t\tchildren: [\n\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Img)({\n\t\t\t\tsrc: _assets_star_dark_svg__WEBPACK_IMPORTED_MODULE_3__,\n\t\t\t}),\n\t\t\thr,\n\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Img)({\n\t\t\t\tsrc: _assets_star_dark_svg__WEBPACK_IMPORTED_MODULE_3__,\n\t\t\t})\n\t\t]\n\t})\n}\n\n\n//# sourceURL=webpack://odin-project/./src/js/components/divider.js?");
 
 /***/ }),
 
@@ -226,7 +226,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n\n\n\nconst content1 = (0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\tattributes: {\n\t\tclass: \"content-1\",\n\t},\n\tchildren: [\n\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\t\tchild: (0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Img)({\n\t\t\t\tsrc: \"../../../assets/image-1.webp\",\n\t\t\t}),\n\t\t}),\n\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\t\tattributes: {},\n\t\t\tchildren: [\n\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.P)({\n\t\t\t\t\tattributes: {},\n\t\t\t\t\tchild: \"Come and check us out. Find more info about our out of this world dinner.\"\n\t\t\t\t}),\n\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.H)({\n\t\t\t\t\tlevel: 2,\n\t\t\t\t\tchildren: [\n\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Span)({\n\t\t\t\t\t\t\tchild: \"BIZZARE\",\n\t\t\t\t\t\t}),\n\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Span)({\n\t\t\t\t\t\t\tchild: \"ADVENTUROUS\",\n\t\t\t\t\t\t}),\n\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Span)({\n\t\t\t\t\t\t\tchild: \"DINNER\",\n\t\t\t\t\t\t}),\n\t\t\t\t\t],\n\t\t\t\t}),\n\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.P)({\n\t\t\t\t\tchild: \"Enjoy a unique meal that kicks different flavor in each and every bite!\"\n\t\t\t\t})\n\t\t\t],\n\t\t}),\n\t],\n})\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (content1);\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/home/content_1.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _assets_image_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../assets/image.jpg */ \"./assets/image.jpg\");\n\n\n\n\nconst content1 = (0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\tattributes: {\n\t\tclass: \"content-1\",\n\t},\n\tchildren: [\n\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\t\tchild: (0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Img)({\n\t\t\t\tsrc: _assets_image_jpg__WEBPACK_IMPORTED_MODULE_2__,\n\t\t\t}),\n\t\t}),\n\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\t\tattributes: {},\n\t\t\tchildren: [\n\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.P)({\n\t\t\t\t\tattributes: {},\n\t\t\t\t\tchild: \"Come and check us out. Find more info about our out of this world dinner.\"\n\t\t\t\t}),\n\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.H)({\n\t\t\t\t\tlevel: 2,\n\t\t\t\t\tchildren: [\n\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Span)({\n\t\t\t\t\t\t\tchild: \"BIZZARE\",\n\t\t\t\t\t\t}),\n\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Span)({\n\t\t\t\t\t\t\tchild: \"ADVENTUROUS\",\n\t\t\t\t\t\t}),\n\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.Span)({\n\t\t\t\t\t\t\tchild: \"DINNER\",\n\t\t\t\t\t\t}),\n\t\t\t\t\t],\n\t\t\t\t}),\n\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_1__.P)({\n\t\t\t\t\tchild: \"Enjoy a unique meal that kicks different flavor in each and every bite!\"\n\t\t\t\t})\n\t\t\t],\n\t\t}),\n\t],\n})\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (content1);\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/home/content_1.js?");
 
 /***/ }),
 
@@ -236,7 +236,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n\n\n\nconst hero = (0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\tattributes: {\n\t\tclass: \"hero\",\n\t},\n\tchild: (0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\tattributes: {\n\t\t\tclass: \"container\",\n\t\t},\n\t\tchildren: [\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: \"hero__content__container\"\n\t\t\t\t},\n\t\t\t\tchildren: [\n\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Img)({\n\t\t\t\t\t\tsrc: \"../../../assets/star-purple.svg\",\n\t\t\t\t\t\talt: \"purple-star-icon\",\n\t\t\t\t\t\tclass: 'purple star'\n\t\t\t\t\t}),\n\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Img)({\n\t\t\t\t\t\tsrc: \"../../../assets/star-yellow.svg\",\n\t\t\t\t\t\talt: \"yellow-star-icon\",\n\t\t\t\t\t\tclass: 'yellow star'\n\t\t\t\t\t}),\n\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.H)({\n\t\t\t\t\t\tlevel: 1,\n\t\t\t\t\t\tchildren: [\n\t\t\t\t\t\t\t\"START YOUR \",\n\t\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Span)({\n\t\t\t\t\t\t\t\tchild: \"BIZZARE \",\n\t\t\t\t\t\t\t\tattributes: {\n\t\t\t\t\t\t\t\t\tclass: 'bizzare',\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}),\n\t\t\t\t\t\t\t\"FOOD \",\n\t\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Span)({\n\t\t\t\t\t\t\t\tchild: \"ADVENTURE\",\n\t\t\t\t\t\t\t\tattributes: {\n\t\t\t\t\t\t\t\t\tclass: 'adventure',\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t})\n\t\t\t\t\t\t]\n\t\t\t\t\t})\n\t\t\t\t],\n\t\t\t})\n\t\t],\n\t})\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (hero);\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/home/hero.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _assets_star_purple_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../assets/star-purple.svg */ \"./assets/star-purple.svg\");\n/* harmony import */ var _assets_star_yellow_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../assets/star-yellow.svg */ \"./assets/star-yellow.svg\");\n\n\n\n\n\nconst hero = (0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\tattributes: {\n\t\tclass: \"hero\",\n\t},\n\tchild: (0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\tattributes: {\n\t\t\tclass: \"container\",\n\t\t},\n\t\tchildren: [\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: \"hero__content__container\"\n\t\t\t\t},\n\t\t\t\tchildren: [\n\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Img)({\n\t\t\t\t\t\tsrc: _assets_star_purple_svg__WEBPACK_IMPORTED_MODULE_2__,\n\t\t\t\t\t\talt: \"purple-star-icon\",\n\t\t\t\t\t\tclass: 'purple star'\n\t\t\t\t\t}),\n\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Img)({\n\t\t\t\t\t\tsrc: _assets_star_yellow_svg__WEBPACK_IMPORTED_MODULE_3__,\n\t\t\t\t\t\talt: \"yellow-star-icon\",\n\t\t\t\t\t\tclass: 'yellow star'\n\t\t\t\t\t}),\n\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.H)({\n\t\t\t\t\t\tlevel: 1,\n\t\t\t\t\t\tchildren: [\n\t\t\t\t\t\t\t\"START YOUR \",\n\t\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Span)({\n\t\t\t\t\t\t\t\tchild: \"BIZZARE \",\n\t\t\t\t\t\t\t\tattributes: {\n\t\t\t\t\t\t\t\t\tclass: 'bizzare',\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}),\n\t\t\t\t\t\t\t\"FOOD \",\n\t\t\t\t\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_0__.Span)({\n\t\t\t\t\t\t\t\tchild: \"ADVENTURE\",\n\t\t\t\t\t\t\t\tattributes: {\n\t\t\t\t\t\t\t\t\tclass: 'adventure',\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t})\n\t\t\t\t\t\t]\n\t\t\t\t\t})\n\t\t\t\t],\n\t\t\t})\n\t\t],\n\t})\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (hero);\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/home/hero.js?");
 
 /***/ }),
 
@@ -266,7 +266,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_factory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/factory */ \"./src/js/components/factory.js\");\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _components_createNavButtons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/createNavButtons */ \"./src/js/components/createNavButtons.js\");\n\n\n\n\n\nconst footer = (0,_components_factory__WEBPACK_IMPORTED_MODULE_0__.createPairedElement)({\n\telement: 'footer',\n\tchild: (0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\tattributes: {\n\t\t\tclass: \"container\",\n\t\t},\n\t\tchildren: [\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: \"brand\",\n\t\t\t\t},\n\t\t\t\tchild: (0,_components_content__WEBPACK_IMPORTED_MODULE_2__.Img)({\n\t\t\t\t\tsrc: '../../../../assets/star-platinum.svg',\n\t\t\t\t}),\n\t\t\t}),\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Nav)({\n\t\t\t\tattributes: {},\n\t\t\t\tchildren: (0,_components_createNavButtons__WEBPACK_IMPORTED_MODULE_3__.createNavButtons)(),\n\t\t\t}),\n\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_2__.P)({\n\t\t\t\tchild: \"All rights reserved 2024\"\n\t\t\t})\n\t\t],\n\t})\n})\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (footer);\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/partials/footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_factory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/factory */ \"./src/js/components/factory.js\");\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _components_createNavButtons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/createNavButtons */ \"./src/js/components/createNavButtons.js\");\n/* harmony import */ var _assets_star_platinum_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../assets/star-platinum.svg */ \"./assets/star-platinum.svg\");\n\n\n\n\n\n\nconst footer = (0,_components_factory__WEBPACK_IMPORTED_MODULE_0__.createPairedElement)({\n\telement: 'footer',\n\tchild: (0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\tattributes: {\n\t\t\tclass: \"container\",\n\t\t},\n\t\tchildren: [\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Div)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: \"brand\",\n\t\t\t\t},\n\t\t\t\tchild: (0,_components_content__WEBPACK_IMPORTED_MODULE_2__.Img)({\n\t\t\t\t\tsrc: _assets_star_platinum_svg__WEBPACK_IMPORTED_MODULE_4__,\n\t\t\t\t}),\n\t\t\t}),\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_1__.Nav)({\n\t\t\t\tattributes: {},\n\t\t\t\tchildren: (0,_components_createNavButtons__WEBPACK_IMPORTED_MODULE_3__.createNavButtons)(),\n\t\t\t}),\n\t\t\t(0,_components_content__WEBPACK_IMPORTED_MODULE_2__.P)({\n\t\t\t\tchild: \"All rights reserved 2024\"\n\t\t\t})\n\t\t],\n\t})\n})\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (footer);\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/partials/footer.js?");
 
 /***/ }),
 
@@ -276,7 +276,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _components_createNavButtons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/createNavButtons */ \"./src/js/components/createNavButtons.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n\n\n\n\n\n\nconst nav = (0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Header)({\n\tattributes: {\n\t\tclass: 'header',\n\t},\n\tchild: (0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\tattributes: {\n\t\t\tclass: 'nav__container',\n\t\t},\n\t\tchildren: [\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: 'brand',\n\t\t\t\t},\n\t\t\t\tchild: (0,_components_content__WEBPACK_IMPORTED_MODULE_2__.Img)({\n\t\t\t\t\tsrc: '../../../../assets/star-platinum.svg',\n\t\t\t\t})\n\t\t\t}),\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Nav)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: \"nav\",\n\t\t\t\t},\n\t\t\t\tchildren: (0,_components_createNavButtons__WEBPACK_IMPORTED_MODULE_1__.createNavButtons)(),\n\t\t\t})\n\t\t],\n\t}),\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (nav);\n\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/partials/nav.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/layout */ \"./src/js/components/layout.js\");\n/* harmony import */ var _components_createNavButtons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/createNavButtons */ \"./src/js/components/createNavButtons.js\");\n/* harmony import */ var _components_content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/content */ \"./src/js/components/content.js\");\n/* harmony import */ var _assets_star_platinum_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../assets/star-platinum.svg */ \"./assets/star-platinum.svg\");\n\n\n\n\n\nconst nav = (0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Header)({\n\tattributes: {\n\t\tclass: 'header',\n\t},\n\tchild: (0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\tattributes: {\n\t\t\tclass: 'nav__container',\n\t\t},\n\t\tchildren: [\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Div)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: 'brand',\n\t\t\t\t},\n\t\t\t\tchild: (0,_components_content__WEBPACK_IMPORTED_MODULE_2__.Img)({\n\t\t\t\t\tsrc: _assets_star_platinum_svg__WEBPACK_IMPORTED_MODULE_3__,\n\t\t\t\t})\n\t\t\t}),\n\t\t\t(0,_components_layout__WEBPACK_IMPORTED_MODULE_0__.Nav)({\n\t\t\t\tattributes: {\n\t\t\t\t\tclass: \"nav\",\n\t\t\t\t},\n\t\t\t\tchildren: (0,_components_createNavButtons__WEBPACK_IMPORTED_MODULE_1__.createNavButtons)(),\n\t\t\t})\n\t\t],\n\t}),\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (nav);\n\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/partials/nav.js?");
 
 /***/ }),
 
@@ -287,6 +287,56 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   TabViews: () => (/* binding */ TabViews)\n/* harmony export */ });\nfunction refreshContent(node, parent) {\n\tparent.innerHTML = '';\n\tif (node && node instanceof Node) {\n\t\tparent.appendChild(node);\n\t\treturn;\n\t}\n\n\tif (!node.every(element => element instanceof Node)) {\n\t\tthrow new Error(\"Array must contain instancs of Node\");\n\t}\n\n\tfor (let n of node) {\n\t\tparent.appendChild(n);\n\t}\n}\n\nfunction TabViews({ parent, views, observable }) {\n\tif (!parent || !(parent instanceof Node)) {\n\t\tthrow new Error(\"Invalid element, parent must be an HTML Node\");\n\t}\n\n\tif (!views || !(views instanceof Array)) {\n\t\tthrow new Error(\"Invalid views, type must be an array\");\n\t}\n\n\tobservable.subscribe((value) => {\n\t\tif (views.length < value + 1) {\n\t\t\tthrow new Error(\"Views out of bounds\")\n\t\t}\n\n\t\trefreshContent(views[value], parent);\n\t});\n\n\trefreshContent(views[0], parent);\n\n\treturn parent;\n}\n\n\n//# sourceURL=webpack://odin-project/./src/js/views/views.js?");
+
+/***/ }),
+
+/***/ "./assets/image.jpg":
+/*!**************************!*\
+  !*** ./assets/image.jpg ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/59282063aebe9f2f63c6.jpg\";\n\n//# sourceURL=webpack://odin-project/./assets/image.jpg?");
+
+/***/ }),
+
+/***/ "./assets/star-dark.svg":
+/*!******************************!*\
+  !*** ./assets/star-dark.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/89e4fc7968e7356c285a.svg\";\n\n//# sourceURL=webpack://odin-project/./assets/star-dark.svg?");
+
+/***/ }),
+
+/***/ "./assets/star-platinum.svg":
+/*!**********************************!*\
+  !*** ./assets/star-platinum.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/c6c14618be5eff738f54.svg\";\n\n//# sourceURL=webpack://odin-project/./assets/star-platinum.svg?");
+
+/***/ }),
+
+/***/ "./assets/star-purple.svg":
+/*!********************************!*\
+  !*** ./assets/star-purple.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/2fec8c7cbadaf0b8fe67.svg\";\n\n//# sourceURL=webpack://odin-project/./assets/star-purple.svg?");
+
+/***/ }),
+
+/***/ "./assets/star-yellow.svg":
+/*!********************************!*\
+  !*** ./assets/star-yellow.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/9c2a10f37e66bb7cff74.svg\";\n\n//# sourceURL=webpack://odin-project/./assets/star-yellow.svg?");
 
 /***/ })
 
@@ -341,6 +391,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -355,6 +417,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

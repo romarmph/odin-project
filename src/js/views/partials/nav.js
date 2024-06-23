@@ -1,8 +1,7 @@
 import { Header, Nav, Div } from "../../components/layout";
 import { createNavButtons } from "../../components/createNavButtons";
 import { Img } from "../../components/content";
-
-
+import starPlatinumLogo from "../../../../assets/star-platinum.svg"
 
 const nav = Header({
 	attributes: {
@@ -18,7 +17,7 @@ const nav = Header({
 					class: 'brand',
 				},
 				child: Img({
-					src: '../../../../assets/star-platinum.svg',
+					src: starPlatinumLogo,
 				})
 			}),
 			Nav({

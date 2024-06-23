@@ -1,5 +1,7 @@
 import { H, Img, Span } from "../../components/content";
 import { Div } from "../../components/layout";
+import starPurple from "../../../../assets/star-purple.svg";
+import starYellow from "../../../../assets/star-yellow.svg";
 
 const hero = Div({
 	attributes: {
@@ -16,12 +18,12 @@ const hero = Div({
 				},
 				children: [
 					Img({
-						src: "../../../assets/star-purple.svg",
+						src: starPurple,
 						alt: "purple-star-icon",
 						class: 'purple star'
 					}),
 					Img({
-						src: "../../../assets/star-yellow.svg",
+						src: starYellow,
 						alt: "yellow-star-icon",
 						class: 'yellow star'
 					}),
